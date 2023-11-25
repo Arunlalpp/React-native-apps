@@ -1,15 +1,19 @@
-import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import WelcomeScreen from './src/components/WelcomeScreen';
 
-export const App = () => {
-  return (
-    <View style={styles.container}>
-      <WelcomeScreen />
-    </View>
-  );
+import {createStackNavigator} from '@react-navigation/stack';
+import WelcomeScreen from './src/components/WelcomeScreen';
+import {NavigationContainer} from '@react-navigation/native';
+
+const Stack = createStackNavigator();
+
+const myStack = () => {
+  return <Stack.Screen name="WELCOME" component={WelcomeScreen} />;
 };
 
-export const styles = StyleSheet.create({
-  container: {},
-});
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>{myStack()}</Stack.Navigator>
+    </NavigationContainer>
+  );
+}

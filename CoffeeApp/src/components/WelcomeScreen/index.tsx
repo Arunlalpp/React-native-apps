@@ -2,8 +2,10 @@ import React from 'react';
 import {ImageBackground, Text, View} from 'react-native';
 import {styles} from './style';
 import {Buttons} from '../Button';
+import {useNavigation} from '@react-navigation/native';
 
 export default function WelcomeScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -18,7 +20,11 @@ export default function WelcomeScreen() {
           <Text style={styles.brandName}>Cavosh</Text>
         </View>
         <View style={styles.button}>
-          <Buttons label="Get Started" onClick={() => []} variant="primary" />
+          <Buttons
+            label="Get Started"
+            onClick={() => navigation.goBack()}
+            variant="primary"
+          />
         </View>
       </ImageBackground>
     </View>
