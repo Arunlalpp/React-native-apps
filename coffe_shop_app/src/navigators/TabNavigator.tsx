@@ -6,8 +6,7 @@ import OrderHistoryScreen from '../screens/OrderHistoryScreen';
 import CardScreen from '../screens/CardScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {style} from './styles';
-import CustomIcon from '../../src/components/CustomIcon';
-import {COLORS} from '../theme/theme';
+import {Common} from '../assets/svg';
 
 const Tabs = createBottomTabNavigator();
 
@@ -25,11 +24,7 @@ const TabNavigator = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <CustomIcon
-              name="home"
-              size={25}
-              color={focused ? COLORS.primaryOrangeHex : COLORS.primaryGreyHex}
-            />
+            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
           ),
         }}
       />
@@ -38,11 +33,7 @@ const TabNavigator = () => {
         component={CardScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <CustomIcon
-              name="cart"
-              size={25}
-              color={focused ? COLORS.primaryOrangeHex : COLORS.primaryGreyHex}
-            />
+            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
           ),
         }}
       />
@@ -51,11 +42,7 @@ const TabNavigator = () => {
         component={FavoritesScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <CustomIcon
-              name="like"
-              size={25}
-              color={focused ? COLORS.primaryOrangeHex : COLORS.primaryGreyHex}
-            />
+            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
           ),
         }}
       />
@@ -64,11 +51,7 @@ const TabNavigator = () => {
         component={OrderHistoryScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <CustomIcon
-              name="notification"
-              size={25}
-              color={focused ? COLORS.primaryOrangeHex : COLORS.primaryGreyHex}
-            />
+            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
           ),
         }}
       />
