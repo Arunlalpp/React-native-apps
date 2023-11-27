@@ -7,6 +7,7 @@ import CardScreen from '../screens/CardScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {style} from './styles';
 import {Common} from '../assets/svg';
+import {COLORS} from '../theme/theme';
 
 const Tabs = createBottomTabNavigator();
 
@@ -24,7 +25,10 @@ const TabNavigator = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
+            <Common.Home
+              name="home"
+              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+            />
           ),
         }}
       />
@@ -33,7 +37,10 @@ const TabNavigator = () => {
         component={CardScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
+            <Common.Menu
+              name="home"
+              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+            />
           ),
         }}
       />
@@ -42,7 +49,10 @@ const TabNavigator = () => {
         component={FavoritesScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
+            <Common.Favorite
+              name="home"
+              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+            />
           ),
         }}
       />
@@ -51,7 +61,22 @@ const TabNavigator = () => {
         component={OrderHistoryScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Common.Home name="home" fill={focused ? 'red' : 'white'} />
+            <Common.Profile
+              name="home"
+              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="card"
+        component={CardScreen}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Common.Cart
+              name="home"
+              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+            />
           ),
         }}
       />

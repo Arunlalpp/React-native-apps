@@ -5,8 +5,8 @@ export const style = StyleSheet.create({
   container: {
     height: 80,
     position: 'absolute',
-    backgroundColor: COLORS.primaryBlackHex,
-    borderRadius: 30,
-    elevation: 1,
+    backgroundColor: COLORS.primaryWhiteHex,
+    borderRadius: 35,
+    elevation: 2,
   },
 });
