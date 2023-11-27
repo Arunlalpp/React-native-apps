@@ -15,8 +15,9 @@ export const style = StyleSheet.create({
     shadowRadius: 5,
     elevation: 5,
   },
-  button: {
-    color: COLORS.primaryWhiteHex,
+  buttonTextStyle: {
+    color: COLORS.primaryBlack,
     fontSize: FONTSIZE.size_14,
+    textAlign: 'center',
   },
 });

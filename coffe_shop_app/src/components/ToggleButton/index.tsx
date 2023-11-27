@@ -67,18 +67,36 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
         : COLORS.backgroundPrimary,
     },
   });
+  //   const buttonBase = {
+  //     fontSize: FONTSIZE.size_14,
+  //     textAlign: 'center',
+  //   };
+
+  //   const rightButtonTextStyle = StyleSheet.create({
+  //     buttonTextStyle: {
+  //       ...buttonBase,
+  //       color: isLeftButtonActive ? COLORS.primaryWhiteHex : COLORS.primaryBlack,
+  //     },
+  //   });
+
+  //   const leftButtonTextStyle = StyleSheet.create({
+  //     buttonTextStyle: {
+  //       ...buttonBase,
+  //       color: isLeftButtonActive ? COLORS.primaryWhiteHex : COLORS.primaryBlack,
+  //     },
+  //   });
 
   return (
     <View style={style.container}>
       <TouchableOpacity
         style={leftButtonStyle.container}
         onPress={handleLeftButtonClick}>
-        <Text style={style.button}>{leftButtonText}</Text>
+        <Text style={style.buttonTextStyle}>{leftButtonText}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={rightButtonStyle.container}
         onPress={handleRightButtonClick}>
-        <Text style={style.button}>{rightButtonText}</Text>
+        <Text style={style.buttonTextStyle}>{rightButtonText}</Text>
       </TouchableOpacity>
     </View>
   );
