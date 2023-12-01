@@ -1,9 +1,10 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import OrderHistoryScreen from './src/screens/OrderHistoryScreen';
 import TabNavigator from './src/navigators/TabNavigator';
 import {RootStackParamList} from './src/types/navigation';
+import SignIn from './src/screens/SignIn';
+import Register from './src/screens/Register';
 
 const App = () => {
   const stack = createNativeStackNavigator<RootStackParamList>();
@@ -14,12 +15,13 @@ const App = () => {
         <stack.Screen
           name="TAB_NAVIGATION"
           component={TabNavigator}
-          options={{animation: 'slide_from_bottom'}}
+          options={{animation: 'simple_push'}}
         />
+        <stack.Screen name="SIGN_IN" component={SignIn} />
         <stack.Screen
-          name="PAYMENT"
-          component={OrderHistoryScreen}
-          options={{animation: 'slide_from_bottom'}}
+          name="REGISTER"
+          component={Register}
+          options={{animation: 'fade_from_bottom'}}
         />
       </stack.Navigator>
     </NavigationContainer>

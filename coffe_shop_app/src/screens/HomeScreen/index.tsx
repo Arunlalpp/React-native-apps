@@ -1,28 +1,32 @@
-import React, {useState} from 'react';
-import {Text, View} from 'react-native';
-// import {useNavigation} from '@react-navigation/native';
-// import {useStore} from '../../store/store';
-// import {RootStackParamList} from '../../types/navigation';
-import {HeaderNavbarUnit} from '../../components/HeaderNavbar';
+/* eslint-disable react/react-in-jsx-scope */
+import {View} from 'react-native';
 import {style} from './styles';
 import {ToggleButton, ToggleButtonTypes} from '../../components/ToggleButton';
+import {useState} from 'react';
+import {HeaderNavbarUnit} from '../../components/HeaderNavbar';
+import {Text} from 'react-native';
+import Register from '../Register';
+import SignIn from '../SignIn';
+
+enum Tabs {
+  SIGN_IN = 'Sign In',
+  REGISTER = 'Register',
+}
 
 const HomeScreen = () => {
-  // const coffeeList = useStore((state: any) => state.coffeeList);
-
-  // console.log(coffeeList.length);
-
-  // const navigation = useNavigation<RootStackParamList>();
   const [activeToggleButton, setActiveToggleButton] = useState(
     ToggleButtonTypes.left,
   );
+  const [selectedTabs, setSelectedTabs] = useState(Tabs.SIGN_IN);
 
   const handleRightButtonClick = () => {
+    setSelectedTabs(Tabs.REGISTER);
     setActiveToggleButton(ToggleButtonTypes.right);
   };
 
   const handleLeftButtonClick = () => {
     setActiveToggleButton(ToggleButtonTypes.left);
+    setSelectedTabs(Tabs.SIGN_IN);
   };
 
   return (
@@ -30,19 +34,26 @@ const HomeScreen = () => {
       <HeaderNavbarUnit>
         <View style={style.headerNav}>
           <View>
-            <Text style={style.headerText}>Lets get you signed in!</Text>
+            <Text style={style.headerText}>
+              {selectedTabs === Tabs.REGISTER
+                ? 'Lets get you Registered!'
+                : 'Lets get you Sign In!'}
+            </Text>
           </View>
         </View>
       </HeaderNavbarUnit>
-      <ToggleButton
-        key={activeToggleButton}
-        leftButtonText="Sign In"
-        rightButtonText="Register"
-        activeButtonType={activeToggleButton}
-        handleRightOnClick={handleRightButtonClick}
-        handleLeftOnClick={handleLeftButtonClick}
-      />
-      {/* <Button title="Start" onPress={() => navigation.navigate('PAYMENT')} /> */}
+      <View style={style.tabContainer}>
+        <ToggleButton
+          key={activeToggleButton}
+          leftButtonText="Sign In"
+          rightButtonText="Register"
+          activeButtonType={activeToggleButton}
+          handleRightOnClick={handleRightButtonClick}
+          handleLeftOnClick={handleLeftButtonClick}
+        />
+        {selectedTabs === Tabs.SIGN_IN && <SignIn />}
+        {selectedTabs === Tabs.REGISTER && <Register />}
+      </View>
     </View>
   );
 };

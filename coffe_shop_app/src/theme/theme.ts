@@ -40,6 +40,8 @@ interface Color {
   primaryTertiary: string;
   primaryBlack: string;
   backgroundPrimary: string;
+  transparent: string;
+  backgroundSecondary: string;
 }
 
 export const COLORS: Color = {
@@ -50,6 +52,8 @@ export const COLORS: Color = {
   primaryTertiary: 'FEE4D6',
   primaryBlack: '#293441',
   backgroundPrimary: '#EBEFF2',
+  transparent: 'transparent',
+  backgroundSecondary: '#E4E9ED',
 };
 
 interface FontFamily {

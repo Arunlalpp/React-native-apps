@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {COLORS, FONTSIZE} from '../../theme/theme';
+import {COLORS, FONTFAMILY, FONTSIZE} from '../../theme/theme';
 
 export const style = StyleSheet.create({
   container: {
@@ -12,7 +12,10 @@ export const style = StyleSheet.create({
   },
   headerText: {
     color: COLORS.primaryWhiteHex,
-    fontSize: FONTSIZE.size_14,
+    fontSize: FONTSIZE.size_20,
     fontWeight: '600',
+    fontFamily: FONTFAMILY.poppins_extrabold,
+    paddingBottom: 30,
   },
+  tabContainer: {position: 'absolute', top: '13%'},
 });
