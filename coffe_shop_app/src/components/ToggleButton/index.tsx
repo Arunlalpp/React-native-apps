@@ -39,16 +39,14 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
 
   const buttonStyle = {
     paddingVertical: 5,
-    PaddingHorizontal: 15,
-    borderRadius: 20,
+    borderRadius: 30,
     textAlign: 'center',
   };
 
   const leftButtonStyle = StyleSheet.create({
     container: {
       ...buttonStyle,
-      paddingHorizontal: 12,
-      paddingVertical: 15,
+      paddingVertical: 20,
       width: '50%',
       backgroundColor: isLeftButtonActive
         ? COLORS.primaryOrangeHex
@@ -59,8 +57,7 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
   const rightButtonStyle = StyleSheet.create({
     container: {
       ...buttonStyle,
-      paddingHorizontal: 12,
-      paddingVertical: 15,
+      paddingVertical: 20,
       width: '50%',
       backgroundColor: isRightButtonActive
         ? COLORS.primaryOrangeHex
