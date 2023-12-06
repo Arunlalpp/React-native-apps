@@ -73,4 +73,10 @@ export const styles = StyleSheet.create({
     flexBasis: '50%',
     paddingHorizontal: 8,
   },
+  frequentlyOrderedContainer: {
+    paddingHorizontal: 10,
+  },
+  orderedPrimaryContainer: {
+    paddingVertical: 8,
+  },
 });
