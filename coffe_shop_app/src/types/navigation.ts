@@ -6,7 +6,16 @@ export type RootStackParamList = {
   TAB_NAVIGATION: undefined;
   SIGN_IN: undefined;
   REGISTER: undefined;
+  WELCOME: undefined;
+  USER_LOGIN: undefined;
 };
 
 export type RootStackNavigationProps =
   NativeStackNavigationProp<RootStackParamList>;
+
+import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
+
+export const DefaultScreenOptions: NativeStackNavigationOptions = {
+  headerShown: false,
+  animation: 'default',
+};
