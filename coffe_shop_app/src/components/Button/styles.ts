@@ -17,6 +17,9 @@ export const styles = StyleSheet.create({
   },
   secondaryButton: {
     backgroundColor: '#5A7E99',
+    paddingHorizontal: 0,
+    borderRadius: 0,
+    height: 70,
   },
   outlinedButton: {
     borderWidth: 2,
@@ -28,5 +31,8 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     paddingHorizontal: 8,
+  },
+  disabledButton: {
+    opacity: 0.4,
   },
 });

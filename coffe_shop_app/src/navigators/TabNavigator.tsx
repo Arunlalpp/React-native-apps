@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
-import HomeScreen from '../screens/HomeScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import OrderHistoryScreen from '../screens/OrderHistoryScreen';
 import CardScreen from '../screens/CardScreen';
@@ -8,6 +7,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {style} from './styles';
 import {Common} from '../assets/svg';
 import {COLORS} from '../theme/theme';
+import Home from '../screens/HomeScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -22,7 +22,7 @@ const TabNavigator = () => {
       }}>
       <Tabs.Screen
         name="Home"
-        component={HomeScreen}
+        component={Home}
         options={{
           tabBarIcon: ({focused}) => (
             <Common.Home

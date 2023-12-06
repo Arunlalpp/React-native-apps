@@ -1,21 +1,76 @@
 import {StyleSheet} from 'react-native';
-import {COLORS, FONTFAMILY, FONTSIZE} from '../../theme/theme';
+import {COLORS, FONTSIZE} from '../../theme/theme';
 
-export const style = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: '100%',
-  },
+export const styles = StyleSheet.create({
   headerNav: {
-    paddingVertical: 50,
+    paddingVertical: 20,
     paddingHorizontal: 10,
+    position: 'relative',
+    width: '100%',
   },
   headerText: {
-    color: COLORS.primaryWhiteHex,
-    fontSize: FONTSIZE.size_20,
-    fontWeight: '600',
-    fontFamily: FONTFAMILY.poppins_extrabold,
-    paddingBottom: 30,
+    textAlign: 'center',
+    color: COLORS.primaryOrangeHex,
+    fontSize: FONTSIZE.size_16,
+    fontWeight: '500',
   },
-  tabContainer: {position: 'absolute', top: '13%'},
+  notificationIcon: {
+    backgroundColor: COLORS.primaryOrangeHex,
+    padding: 18,
+    borderRadius: 999,
+    width: 42,
+    height: 42,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerUserText: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  searchInput: {
+    position: 'absolute',
+    top: '120%',
+    left: '2%',
+  },
+  customerCode: {
+    paddingBottom: 30,
+    paddingVertical: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  codeDescriptionContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  customerCodeText: {
+    width: '60%',
+    color: COLORS.primaryWhiteHex,
+    fontSize: FONTSIZE.size_16,
+    fontWeight: '500',
+  },
+  gratingText: {
+    color: COLORS.primaryWhiteHex,
+    fontSize: FONTSIZE.size_18,
+    fontWeight: '600',
+  },
+  baseText: {
+    color: COLORS.primaryWhiteHex,
+    marginRight: 8,
+  },
+  coffeeCardContainer: {paddingHorizontal: 10, paddingVertical: 10},
+  newInText: {
+    paddingVertical: 10,
+    color: COLORS.primaryBlack,
+    fontSize: FONTSIZE.size_16,
+    fontWeight: '600',
+  },
+  coffeeCard: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexBasis: '50%',
+    paddingHorizontal: 8,
+  },
 });
