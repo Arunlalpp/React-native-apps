@@ -45,5 +45,32 @@ export const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
   },
-  customerCodeText: {width: '60%'},
+  customerCodeText: {
+    width: '60%',
+    color: COLORS.primaryWhiteHex,
+    fontSize: FONTSIZE.size_16,
+    fontWeight: '500',
+  },
+  gratingText: {
+    color: COLORS.primaryWhiteHex,
+    fontSize: FONTSIZE.size_18,
+    fontWeight: '600',
+  },
+  baseText: {
+    color: COLORS.primaryWhiteHex,
+    marginRight: 8,
+  },
+  coffeeCardContainer: {paddingHorizontal: 10, paddingVertical: 10},
+  newInText: {
+    paddingVertical: 10,
+    color: COLORS.primaryBlack,
+    fontSize: FONTSIZE.size_16,
+    fontWeight: '600',
+  },
+  coffeeCard: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexBasis: '50%',
+    paddingHorizontal: 8,
+  },
 });
