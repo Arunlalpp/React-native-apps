@@ -20,7 +20,7 @@ const CoffeeCard: React.FC<CoffeeCardProps> = ({coffeeCardItems}) => {
         source={{
           uri: coffeeCardItems.cardImage,
         }}
-        resizeMode="cover"
+        resizeMode="contain"
         style={styles.image}
       />
       <Text style={styles.textContainer}>{coffeeCardItems.title}</Text>

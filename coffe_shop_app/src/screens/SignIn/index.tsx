@@ -16,11 +16,9 @@ const SignIn = () => {
   const [password, setPassword] = useState<string>('');
 
   const handleSignUp = () => {
-    console.log('reached here');
     auth
       .signInWithEmailAndPassword(email, password)
-      .then((userCredentials: any) => {
-        // const user = userCredentials.user;
+      .then(() => {
         console.log('successfully logged in');
       })
       .catch(err => console.log(err, 'failed to login'));

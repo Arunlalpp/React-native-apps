@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
-import FavoritesScreen from '../screens/FavoritesScreen';
 import OrderHistoryScreen from '../screens/OrderHistoryScreen';
 import CardScreen from '../screens/CardScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -8,6 +7,8 @@ import {style} from './styles';
 import {Common} from '../assets/svg';
 import {COLORS} from '../theme/theme';
 import Home from '../screens/HomeScreen';
+import Favorites from '../screens/Favorites';
+import Menu from '../screens/Menu';
 
 const Tabs = createBottomTabNavigator();
 
@@ -27,31 +28,37 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => (
             <Common.Home
               name="home"
-              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+              fill={
+                focused ? COLORS.backgroundSecondary : COLORS.primaryWhiteHex
+              }
             />
           ),
         }}
       />
       <Tabs.Screen
         name="Cart"
-        component={CardScreen}
+        component={Menu}
         options={{
           tabBarIcon: ({focused}) => (
             <Common.Menu
               name="home"
-              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+              fill={
+                focused ? COLORS.backgroundSecondary : COLORS.primaryWhiteHex
+              }
             />
           ),
         }}
       />
       <Tabs.Screen
         name="Favorite"
-        component={FavoritesScreen}
+        component={Favorites}
         options={{
           tabBarIcon: ({focused}) => (
             <Common.Favorite
               name="home"
-              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+              fill={
+                focused ? COLORS.backgroundSecondary : COLORS.primaryWhiteHex
+              }
             />
           ),
         }}
@@ -63,7 +70,9 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => (
             <Common.Profile
               name="home"
-              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+              fill={
+                focused ? COLORS.backgroundSecondary : COLORS.primaryWhiteHex
+              }
             />
           ),
         }}
@@ -75,7 +84,9 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => (
             <Common.Cart
               name="home"
-              fill={focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex}
+              fill={
+                focused ? COLORS.backgroundSecondary : COLORS.primaryWhiteHex
+              }
             />
           ),
         }}

@@ -10,18 +10,16 @@ export const styles = StyleSheet.create({
     width: '100%',
   },
   image: {
-    aspectRatio: 1 / 1,
-    height: 110,
-    width: 120,
+    aspectRatio: 3 / 2,
     borderRadius: 10,
     overflow: 'hidden',
+    width: '100%',
   },
   textContainer: {
     paddingTop: 8,
     width: '70%',
   },
   addItems: {
-    width: '100%',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
