@@ -70,7 +70,14 @@ export const styles = StyleSheet.create({
   coffeeCard: {
     display: 'flex',
     flexDirection: 'row',
-    flexBasis: '50%',
     paddingHorizontal: 8,
+    width: '100%',
+    flex: 1,
+  },
+  frequentlyOrderedContainer: {
+    paddingHorizontal: 10,
+  },
+  orderedPrimaryContainer: {
+    paddingVertical: 8,
   },
 });

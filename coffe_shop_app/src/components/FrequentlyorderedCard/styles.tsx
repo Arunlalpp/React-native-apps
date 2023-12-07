@@ -4,26 +4,29 @@ import {COLORS} from '../../theme/theme';
 export const styles = StyleSheet.create({
   imageContainer: {
     backgroundColor: COLORS.primaryWhiteHex,
-    padding: 8,
     borderRadius: 10,
     marginRight: 10,
-    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    overflow: 'hidden',
   },
   image: {
-    aspectRatio: 3 / 2,
-    borderRadius: 10,
+    aspectRatio: 1 / 1,
+    height: 85,
+    width: 80,
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
     overflow: 'hidden',
-    width: '100%',
   },
   textContainer: {
     paddingTop: 8,
-    width: '70%',
   },
   addItems: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-end',
+    alignContent: 'flex-end',
   },
   addIcon: {
     backgroundColor: COLORS.primaryOrangeHex,
@@ -34,4 +37,5 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {flex: 1, paddingLeft: 15},
 });

@@ -8,12 +8,12 @@ import 'firebase/compat/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyCw_izsa1egfYmGPp3Sm8XxEFenw0zoF48',
+  apiKey: 'AIzaSyB0i6Ov8S3gGRXjvUxduwZn4aZiHIEFsio',
   authDomain: 'authentication-1381c.firebaseapp.com',
-  projectId: 'authentication-1381c',
-  storageBucket: 'authentication-1381c.appspot.com',
+  projectId: 'coffeeshop-50ed0',
+  storageBucket: 'coffeeshop-50ed0.appspot.com',
   messagingSenderId: '351775425709',
-  appId: '1:351775425709:web:6882abc3a16eab9ffdb224',
+  appId: '1:988907937725:android:eb8566b1f4a375bcef7cd4',
   measurementId: 'G-2BQNMNC5TQ',
 };
 

@@ -49,7 +49,7 @@ export const COLORS: Color = {
   secondaryText: '5A7E99',
   primaryOrangeHex: '#E65738',
   primaryWhiteHex: '#FFFFFF',
-  primaryTertiary: 'FEE4D6',
+  primaryTertiary: '#FEE4D6',
   primaryBlack: '#293441',
   backgroundPrimary: '#EBEFF2',
   transparent: 'transparent',

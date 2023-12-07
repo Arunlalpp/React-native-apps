@@ -1,4 +1,10 @@
-import {Pressable, ScrollView, Text, View} from 'react-native';
+import {
+  Pressable,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import {HeaderNavbarUnit} from '../../components/HeaderNavbar';
 import {Common} from '../../assets/svg';
@@ -7,10 +13,11 @@ import SearchInput from '../../components/SearchInput';
 import Spacer from '../../components/Spacer';
 import CoffeeCard from '../../components/CoffeeCard';
 import {dummyCoffeeCardData} from '../../data/CoffeData';
+import FrequentlyOrderedCard from '../../components/FrequentlyorderedCard';
 
 const Home = () => {
   return (
-    <>
+    <ScrollView>
       <View>
         <HeaderNavbarUnit>
           <View style={styles.headerNav}>
@@ -41,13 +48,21 @@ const Home = () => {
         <Text style={styles.newInText}>New in</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {dummyCoffeeCardData.map((data, index) => (
-            <Pressable style={styles.coffeeCard} key={index}>
+            <TouchableOpacity style={styles.coffeeCard} key={index}>
               <CoffeeCard coffeeCardItems={data} />
-            </Pressable>
+            </TouchableOpacity>
           ))}
         </ScrollView>
       </View>
-    </>
+      <View style={styles.frequentlyOrderedContainer}>
+        <Text style={styles.newInText}>frequently ordered</Text>
+        {dummyCoffeeCardData.map((data, index) => (
+          <TouchableOpacity style={styles.orderedPrimaryContainer} key={index}>
+            <FrequentlyOrderedCard coffeeCardItems={data} />
+          </TouchableOpacity>
+        ))}
+      </View>
+    </ScrollView>
   );
 };
 

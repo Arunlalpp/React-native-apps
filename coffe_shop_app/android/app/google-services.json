@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "351775425709",
-    "project_id": "authentication-1381c",
-    "storage_bucket": "authentication-1381c.appspot.com"
+    "project_number": "988907937725",
+    "project_id": "coffeeshop-50ed0",
+    "storage_bucket": "coffeeshop-50ed0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:351775425709:android:a5417df35d008e5efdb224",
+        "mobilesdk_app_id": "1:988907937725:android:eb8566b1f4a375bcef7cd4",
         "android_client_info": {
           "package_name": "com.coffe_shop_app"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "351775425709-idtou46ldinrnhs1l0odg52binucbcli.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCjqNuMDKhnkq-3tmyfspWGYAcpBXm1Azk"
+          "current_key": "AIzaSyCCyxm2_uX0N6JoLkkdqekwv4X5HRYBY7U"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "351775425709-idtou46ldinrnhs1l0odg52binucbcli.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

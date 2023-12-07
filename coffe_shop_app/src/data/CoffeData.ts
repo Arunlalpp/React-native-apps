@@ -44,4 +44,28 @@ export const dummyCoffeeCardData = [
     title: 'Abcd',
     price: '44.8',
   },
+  {
+    cardImage:
+      'https://images.pexels.com/photos/2648988/pexels-photo-2648988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Abcd',
+    price: '44.8',
+  },
+  {
+    cardImage:
+      'https://images.pexels.com/photos/2648988/pexels-photo-2648988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Abcd',
+    price: '44.8',
+  },
+  {
+    cardImage:
+      'https://images.pexels.com/photos/2648988/pexels-photo-2648988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Abcd',
+    price: '44.8',
+  },
+  {
+    cardImage:
+      'https://images.pexels.com/photos/2648988/pexels-photo-2648988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Abcd',
+    price: '44.8',
+  },
 ];
