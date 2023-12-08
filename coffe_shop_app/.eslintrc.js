@@ -1,4 +1,7 @@
 module.exports = {
-  root: true,
-  extends: '@react-native',
+  bracketSpacing: true,
+  jsxBracketSameLine: true,
+  singleQuote: true,
+  trailingComma: 'all',
+  semi: true,
 };
