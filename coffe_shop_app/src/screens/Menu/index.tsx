@@ -1,15 +1,15 @@
-import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
-import {HeaderNavbarUnit} from '../../components/HeaderNavbar';
+import { HeaderNavbarUnit } from '../../components/HeaderNavbar';
 import SearchInput from '../../components/SearchInput';
-import {styles} from './styles';
+import { styles } from './styles';
 import Spacer from '../../components/Spacer';
-import {dummyCoffeeCardData} from '../../data/CoffeData';
+import { dummyCoffeeCardData } from '../../data/CoffeData';
 import CoffeeCard from '../../components/CoffeeCard';
 
 const Menu = () => {
   return (
-    <View>
+    <>
       <View style={styles.container}>
         <HeaderNavbarUnit>
           <View style={styles.headerNav}>
@@ -36,7 +36,7 @@ const Menu = () => {
         </View>
         <Spacer space={40} direction="Vertical" />
       </ScrollView>
-    </View>
+    </>
   );
 };
 

@@ -8,14 +8,14 @@ import Spacer from '../../components/Spacer';
 
 const Favorites = () => {
   return (
-    <ScrollView>
+    <>
       <HeaderNavbarUnit>
         <View style={styles.headerNav}>
           <Text style={styles.header}>frequently</Text>
         </View>
         <Spacer space={20} direction="Vertical" />
       </HeaderNavbarUnit>
-      <View style={styles.favoritesContainer}>
+      <ScrollView style={styles.favoritesContainer}>
         <View style={styles.bottomContainer}>
           <Text style={styles.itemsText}>
             {dummyCoffeeCardData.length} Items
@@ -26,8 +26,8 @@ const Favorites = () => {
             <FrequentlyOrderedCard coffeeCardItems={data} />
           </TouchableOpacity>
         ))}
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </>
   );
 };
 

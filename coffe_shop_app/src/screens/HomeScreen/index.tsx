@@ -17,7 +17,7 @@ import FrequentlyOrderedCard from '../../components/FrequentlyorderedCard';
 
 const Home = () => {
   return (
-    <ScrollView>
+    <>
       <View>
         <HeaderNavbarUnit>
           <View style={styles.headerNav}>
@@ -44,25 +44,29 @@ const Home = () => {
         </HeaderNavbarUnit>
       </View>
       <Spacer space={45} direction="Vertical" />
-      <View style={styles.coffeeCardContainer}>
-        <Text style={styles.newInText}>New in</Text>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <ScrollView>
+        <View style={styles.coffeeCardContainer}>
+          <Text style={styles.newInText}>New in</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {dummyCoffeeCardData.map((data, index) => (
+              <TouchableOpacity style={styles.coffeeCard} key={index}>
+                <CoffeeCard coffeeCardItems={data} />
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        </View>
+        <View style={styles.frequentlyOrderedContainer}>
+          <Text style={styles.newInText}>frequently ordered</Text>
           {dummyCoffeeCardData.map((data, index) => (
-            <TouchableOpacity style={styles.coffeeCard} key={index}>
-              <CoffeeCard coffeeCardItems={data} />
+            <TouchableOpacity
+              style={styles.orderedPrimaryContainer}
+              key={index}>
+              <FrequentlyOrderedCard coffeeCardItems={data} />
             </TouchableOpacity>
           ))}
-        </ScrollView>
-      </View>
-      <View style={styles.frequentlyOrderedContainer}>
-        <Text style={styles.newInText}>frequently ordered</Text>
-        {dummyCoffeeCardData.map((data, index) => (
-          <TouchableOpacity style={styles.orderedPrimaryContainer} key={index}>
-            <FrequentlyOrderedCard coffeeCardItems={data} />
-          </TouchableOpacity>
-        ))}
-      </View>
-    </ScrollView>
+        </View>
+      </ScrollView>
+    </>
   );
 };
 
