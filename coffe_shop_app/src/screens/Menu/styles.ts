@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {COLORS, FONTSIZE} from '../../theme/theme';
+import { StyleSheet } from 'react-native';
+import { COLORS, FONTSIZE } from '../../theme/theme';
 
 export const styles = StyleSheet.create({
   headerNav: {
@@ -29,5 +29,15 @@ export const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
+  },
+  categoriesContainer: {
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+  },
+  newInText: {
+    color: COLORS.primaryBlack,
+    fontSize: FONTSIZE.size_16,
+    fontWeight: '600',
+    paddingBottom: 5,
   },
 });

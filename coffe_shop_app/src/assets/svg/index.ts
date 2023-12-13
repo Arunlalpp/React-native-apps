@@ -9,6 +9,9 @@ import HeartFilled from './HeartFilled.svg';
 import Notification from './Notification.svg';
 import Search from './Search.svg';
 import Add from './Addition.svg';
+import Subtract from './Subtract.svg';
+import Calender from './Calender.svg';
+import ArrowRight from './Chevronright.svg';
 
 export const Common = {
   Home,
@@ -22,4 +25,7 @@ export const Common = {
   Notification,
   Search,
   Add,
+  Subtract,
+  Calender,
+  ArrowRight,
 };

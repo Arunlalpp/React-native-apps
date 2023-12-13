@@ -1,4 +1,4 @@
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   [x: string]: any;
@@ -8,12 +8,13 @@ export type RootStackParamList = {
   REGISTER: undefined;
   WELCOME: undefined;
   USER_LOGIN: undefined;
+  COFFEE_DETAILS: undefined;
 };
 
 export type RootStackNavigationProps =
   NativeStackNavigationProp<RootStackParamList>;
 
-import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
+import { NativeStackNavigationOptions } from '@react-navigation/native-stack';
 
 export const DefaultScreenOptions: NativeStackNavigationOptions = {
   headerShown: false,
