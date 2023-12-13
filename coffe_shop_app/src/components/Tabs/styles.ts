@@ -1,36 +1,39 @@
-import {StyleSheet} from 'react-native';
-import {COLORS, FONTSIZE} from '../../theme/theme';
+import { StyleSheet } from 'react-native';
+import { COLORS, FONTSIZE } from '../../theme/theme';
 
 export const styles = StyleSheet.create({
   tabContainer: {
-    backgroundColor: COLORS.primaryWhiteHex,
+    backgroundColor: COLORS.transparent,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 4,
-    borderRadius: 8,
+    borderRadius: 20,
   },
   tab: {
-    paddingVertical: 5,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
-    flex: 1,
-  },
-  tabActive: {
-    backgroundColor: COLORS.primaryOrangeHex,
-    paddingVertical: 5,
+    backgroundColor: COLORS.backgroundSecondary,
     borderRadius: 20,
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
     flex: 1,
+    flexDirection: 'row',
+    padding: 2,
+    marginLeft: 8,
+  },
+  tabActive: {
     alignItems: 'center',
+    backgroundColor: COLORS.primaryOrangeHex,
+    borderRadius: 20,
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    padding: 2,
+    marginLeft: 8,
   },
   tabText: {
     color: COLORS.primaryBlack,
-    fontWeight: '500',
+    fontWeight: '400',
     fontSize: FONTSIZE.size_14,
     marginLeft: 8,
   },
@@ -41,11 +44,11 @@ export const styles = StyleSheet.create({
     marginLeft: 8,
   },
   icon: {
+    alignItems: 'center',
     backgroundColor: COLORS.primaryWhiteHex,
     borderRadius: 999,
-    width: 35,
-    height: 35,
+    height: 30,
     justifyContent: 'center',
-    alignItems: 'center',
+    width: 30,
   },
 });

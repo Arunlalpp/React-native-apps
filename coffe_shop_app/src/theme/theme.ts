@@ -42,6 +42,7 @@ interface Color {
   backgroundPrimary: string;
   transparent: string;
   backgroundSecondary: string;
+  backgroundTransparant: string;
 }
 
 export const COLORS: Color = {
@@ -54,6 +55,7 @@ export const COLORS: Color = {
   backgroundPrimary: '#EBEFF2',
   transparent: 'transparent',
   backgroundSecondary: '#E4E9ED',
+  backgroundTransparant: 'rgba(52, 52, 52, 0.8)',
 };
 
 interface FontFamily {

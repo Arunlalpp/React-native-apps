@@ -1,6 +1,6 @@
 import React from 'react';
-import {Pressable, Text, View} from 'react-native';
-import {styles} from './styles';
+import { Pressable, Text, View } from 'react-native';
+import { styles } from './styles';
 
 type TabOptionType = {
   name: string;
@@ -12,9 +12,16 @@ interface TabsProps {
   selected: string;
   onChange: (tab: string) => void;
   icon?: string | any;
+  isIconVisible?: boolean;
 }
 
-const Tabs: React.FC<TabsProps> = ({tabs, selected, onChange, icon: Icon}) => {
+const Tabs: React.FC<TabsProps> = ({
+  tabs,
+  selected,
+  onChange,
+  icon: Icon,
+  isIconVisible,
+}) => {
   return (
     <View style={styles.tabContainer}>
       {tabs?.map(tab => {
@@ -26,7 +33,7 @@ const Tabs: React.FC<TabsProps> = ({tabs, selected, onChange, icon: Icon}) => {
               ]}
               onPress={() => onChange(tab?.value)}
               key={tab?.value}>
-              <View style={styles.icon}>{Icon}</View>
+              {isIconVisible && <View style={styles.icon}>{Icon}</View>}
               <Text
                 style={
                   tab?.value === selected

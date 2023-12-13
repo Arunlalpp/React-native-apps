@@ -2,13 +2,14 @@
 import React from 'react';
 import OrderHistoryScreen from '../screens/OrderHistoryScreen';
 import CardScreen from '../screens/CardScreen';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {style} from './styles';
-import {Common} from '../assets/svg';
-import {COLORS} from '../theme/theme';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { style } from './styles';
+import { Common } from '../assets/svg';
+import { COLORS } from '../theme/theme';
 import Home from '../screens/HomeScreen';
 import Favorites from '../screens/Favorites';
 import Menu from '../screens/Menu';
+import DatePicker from '../components/DatePicker';
 
 const Tabs = createBottomTabNavigator();
 
@@ -25,7 +26,7 @@ const TabNavigator = () => {
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: ({focused}) => (
+          tabBarIcon: ({ focused }) => (
             <Common.Home
               name="home"
               fill={
@@ -39,7 +40,7 @@ const TabNavigator = () => {
         name="Cart"
         component={Menu}
         options={{
-          tabBarIcon: ({focused}) => (
+          tabBarIcon: ({ focused }) => (
             <Common.Menu
               name="home"
               fill={
@@ -53,7 +54,7 @@ const TabNavigator = () => {
         name="Favorite"
         component={Favorites}
         options={{
-          tabBarIcon: ({focused}) => (
+          tabBarIcon: ({ focused }) => (
             <Common.Favorite
               name="home"
               fill={
@@ -67,7 +68,7 @@ const TabNavigator = () => {
         name="History"
         component={OrderHistoryScreen}
         options={{
-          tabBarIcon: ({focused}) => (
+          tabBarIcon: ({ focused }) => (
             <Common.Profile
               name="home"
               fill={
@@ -79,9 +80,9 @@ const TabNavigator = () => {
       />
       <Tabs.Screen
         name="card"
-        component={CardScreen}
+        component={DatePicker}
         options={{
-          tabBarIcon: ({focused}) => (
+          tabBarIcon: ({ focused }) => (
             <Common.Cart
               name="home"
               fill={
