@@ -69,3 +69,26 @@ export const dummyCoffeeCardData = [
     price: '44.8',
   },
 ];
+
+export const dummyCustomizedData = [
+  {
+    title: 'Milk',
+    confirmText: 'Yes',
+    icon: '',
+  },
+  {
+    title: 'Milk',
+    confirmText: 'Yes',
+    icon: '',
+  },
+  {
+    title: 'Milk',
+    confirmText: 'Yes',
+    icon: '',
+  },
+  {
+    title: 'Milk',
+    confirmText: 'Yes',
+    icon: '',
+  },
+];

@@ -20,7 +20,7 @@ const Tabs: React.FC<TabsProps> = ({
   selected,
   onChange,
   icon: Icon,
-  isIconVisible,
+  isIconVisible = false,
 }) => {
   return (
     <View style={styles.tabContainer}>
@@ -37,8 +37,8 @@ const Tabs: React.FC<TabsProps> = ({
               <Text
                 style={
                   tab?.value === selected
-                    ? styles.tabTextActive
-                    : styles.tabText
+                    ? [styles.tabTextActive]
+                    : [styles.tabText]
                 }>
                 {tab?.name}
               </Text>

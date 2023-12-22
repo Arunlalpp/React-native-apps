@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 10,
     position: 'absolute',
-    top: '-30%',
+    top: '-20%',
   },
   userProductAddContainer: {
     backgroundColor: COLORS.primaryOrangeHex,
@@ -34,7 +34,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     borderRadius: 20,
-    paddingVertical: 25,
     paddingHorizontal: 5,
   },
   image: {
@@ -44,6 +43,7 @@ export const styles = StyleSheet.create({
   },
   itemDescription: {
     paddingHorizontal: 10,
+    paddingBottom: 10,
   },
   newInText: {
     paddingVertical: 10,
@@ -58,5 +58,15 @@ export const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingVertical: 2,
+  },
+  bottomContainer: {
+    paddingHorizontal: 10,
+  },
+  customizedWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    paddingHorizontal: 8,
+    width: '100%',
   },
 });
