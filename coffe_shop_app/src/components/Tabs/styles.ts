@@ -17,7 +17,10 @@ export const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
+    justifyContent: 'center',
+    elevation: 1,
     padding: 2,
+    shadowColor: '#000',
     marginLeft: 8,
   },
   tabActive: {
@@ -27,9 +30,11 @@ export const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     padding: 2,
+    elevation: 1,
     marginLeft: 8,
+    shadowColor: '#000',
   },
   tabText: {
     color: COLORS.primaryBlack,

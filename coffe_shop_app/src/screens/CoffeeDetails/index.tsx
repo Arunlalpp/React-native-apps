@@ -7,19 +7,20 @@ import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
 import Spacer from '../../components/Spacer';
 import Tabs from '../../components/Tabs';
+import CustomizeCoffeeUnit from '../../components/CoffeeCustomizeUnit';
+import { dummyCustomizedData } from '../../data/CoffeData';
 
 enum TabValues {
-  HOT_DRINKS = 'Hot drinks',
-  SOFT_DRINKS = 'Soft drinks',
-  COLD_DRINKS = 'Cold drinks',
+  SMALL = 'Small',
+  MEDIUM = 'Medium',
+  LARGE = 'Large',
 }
 
 const CoffeeDetails = () => {
   const navigation = useNavigation();
 
   const [count, setCount] = useState<number>(0);
-
-  const [selectedTabs, setSelectedTabs] = useState(TabValues.HOT_DRINKS);
+  const [selectedTabs, setSelectedTabs] = useState(TabValues.SMALL);
 
   const tabChangeHandler = (tab: TabValues) => {
     if (tab === selectedTabs) {
@@ -28,10 +29,12 @@ const CoffeeDetails = () => {
     setSelectedTabs(tab);
   };
   const tabs = [
-    { name: 'Hot drinks', value: TabValues.HOT_DRINKS },
-    { name: 'Soft drinks', value: TabValues.SOFT_DRINKS },
-    { name: 'Cold drinks', value: TabValues.COLD_DRINKS },
+    { name: 'Small', value: TabValues.SMALL },
+    { name: 'Medium', value: TabValues.MEDIUM },
+    { name: 'Large', value: TabValues.LARGE },
   ];
+
+  const dummyCoffeeUnitData = [{}];
 
   return (
     <View>
@@ -49,12 +52,15 @@ const CoffeeDetails = () => {
       <View style={styles.primaryContainer}>
         <View>
           <View style={styles.userProductAddContainer}>
-            <Pressable onPress={() => setCount(count + 1)}>
+            <Pressable
+              onPress={() => setCount(count + 1)}
+              style={{ paddingVertical: 8 }}>
               <Common.Add />
             </Pressable>
             <Text>{count}</Text>
             <Pressable
-              onPress={() => setCount(count => Math.max(count - 1, 0))}>
+              onPress={() => setCount(count => Math.max(count - 1, 0))}
+              style={{ paddingVertical: 8 }}>
               <Common.Subtract />
             </Pressable>
           </View>
@@ -77,10 +83,22 @@ const CoffeeDetails = () => {
           quisquam exercitationem illum minima
         </Text>
         <View style={styles.productQuantity}>
-          <Text>Size</Text>
+          <Text style={styles.newInText}>Size</Text>
           <Text>250 ml</Text>
         </View>
         <Tabs onChange={tabChangeHandler} selected={selectedTabs} tabs={tabs} />
+      </View>
+      <View style={styles.bottomContainer}>
+        <Text style={styles.newInText}>Customize your coffee</Text>
+        {dummyCustomizedData.map((data, index) => (
+          <Pressable key={index} style={styles.customizedWrapper}>
+            <CustomizeCoffeeUnit
+              confirmText={data.confirmText}
+              icon={<Common.Calender stroke={COLORS.primaryOrangeHex} />}
+              title={data.title}
+            />
+          </Pressable>
+        ))}
       </View>
     </View>
   );
