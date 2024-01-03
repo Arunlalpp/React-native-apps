@@ -58,7 +58,7 @@ const CollapsibleHeader = () => {
           borderBottomColor: '#EFEFF4',
           borderBottomWidth: 2,
           padding: 10,
-          backgroundColor: 'blue',
+          backgroundColor: 'red',
         }}>
         <Image
           source={{ uri: 'https://via.placeholder.com/300' }}
