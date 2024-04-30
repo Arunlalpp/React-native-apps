@@ -1,7 +1,5 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import OrderHistoryScreen from '../screens/OrderHistoryScreen';
-import CardScreen from '../screens/CardScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { style } from './styles';
 import { Common } from '../assets/svg';

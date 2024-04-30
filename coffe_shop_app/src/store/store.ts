@@ -1,13 +1,13 @@
-import {create} from 'zustand';
-import {produce} from 'immer';
-import {persist, createJSONStorage} from 'zustand/middleware';
+import { create } from 'zustand';
+import { produce } from 'immer';
+import { persist, createJSONStorage } from 'zustand/middleware';
 import asyncStorage from '@react-native-async-storage/async-storage';
-import CoffeeData from '../data/CoffeData';
+import { dummyCustomizedData } from '../data/CoffeData';
 
 export const useStore = create(
   persist(
     (set, get) => ({
-      coffeeList: CoffeeData,
+      coffeeList: dummyCustomizedData,
       cartPrice: 0,
       favoriteList: [],
       cartList: [],
