@@ -1,7 +1,7 @@
-import {Image, Pressable, Text, View} from 'react-native';
+import { Image, Pressable, Text, View } from 'react-native';
 import React from 'react';
-import {Common} from '../../assets/svg';
-import {styles} from './styles';
+import { Common } from '../../assets/svg';
+import { styles } from './styles';
 
 export interface CardProps {
   cardImage: string;

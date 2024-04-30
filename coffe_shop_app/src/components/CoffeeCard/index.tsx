@@ -1,7 +1,7 @@
-import {Image, Pressable, Text, View} from 'react-native';
+import { Image, Pressable, Text, View } from 'react-native';
 import React from 'react';
-import {styles} from './styles';
-import {Common} from '../../assets/svg';
+import { styles } from './styles';
+import { Common } from '../../assets/svg';
 
 export interface CardProps {
   cardImage: string;
@@ -13,7 +13,7 @@ interface CoffeeCardProps {
   coffeeCardItems: CardProps;
 }
 
-const CoffeeCard: React.FC<CoffeeCardProps> = ({coffeeCardItems}) => {
+const CoffeeCard: React.FC<CoffeeCardProps> = ({ coffeeCardItems }) => {
   return (
     <View style={styles.imageContainer}>
       <Image

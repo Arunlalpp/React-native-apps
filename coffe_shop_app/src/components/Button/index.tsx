@@ -1,9 +1,9 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
-import {Text, View} from 'react-native';
-import {styles} from './styles';
-import {Loader} from '../Loader';
-import {COLORS} from '../../theme/theme';
+import { TouchableOpacity } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from './styles';
+import { Loader } from '../Loader';
+import { COLORS } from '../../theme/theme';
 
 export interface ButtonProps {
   label: string;

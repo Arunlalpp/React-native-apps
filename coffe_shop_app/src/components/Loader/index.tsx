@@ -1,7 +1,7 @@
 import React from 'react';
-import {ActivityIndicator, View} from 'react-native';
-import {styles} from './style';
-import {COLORS} from '../../theme/theme';
+import { ActivityIndicator, View } from 'react-native';
+import { styles } from './style';
+import { COLORS } from '../../theme/theme';
 
 interface LoaderProps {
   size?: 'small' | 'large';

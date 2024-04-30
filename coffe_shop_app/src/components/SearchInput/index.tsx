@@ -1,9 +1,9 @@
-import {View} from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
 import TextInput from '../TextInput';
-import {Common} from '../../assets/svg';
-import {styles} from './styles';
-import {COLORS} from '../../theme/theme';
+import { Common } from '../../assets/svg';
+import { styles } from './styles';
+import { COLORS } from '../../theme/theme';
 
 const SearchInput = () => {
   return (

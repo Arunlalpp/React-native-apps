@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {Pressable, View} from 'react-native';
-import TextInput, {TextInputProps} from '../TextInput';
-import {Common} from '../../assets/svg';
+import React, { useState } from 'react';
+import { Pressable, View } from 'react-native';
+import TextInput, { TextInputProps } from '../TextInput';
+import { Common } from '../../assets/svg';
 
 export type PasswordInputProps = TextInputProps & {
   placeholder?: string;
@@ -24,7 +24,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
           visibilityEyeIcon ? (
             <Pressable
               onPress={() => setIsPasswordVisible(!isPasswordVisible)}
-              hitSlop={{top: 14, bottom: 14, left: 14, right: 14}}>
+              hitSlop={{ top: 14, bottom: 14, left: 14, right: 14 }}>
               <Common.EyeLock />
             </Pressable>
           ) : null

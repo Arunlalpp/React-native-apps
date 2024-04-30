@@ -1,8 +1,8 @@
 import React from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
-import {styles} from './styles';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles';
 import Spacer from '../Spacer';
-import {dummySocialMediaData} from '../../data/CoffeData';
+import { dummySocialMediaData } from '../../data/CoffeData';
 
 export interface LoginPlatformProps {
   title: string;

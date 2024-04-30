@@ -1,13 +1,12 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 
 export interface SpacerProps {
   space: number;
   direction?: 'horizontal' | 'Vertical';
 }
 
-const Spacer: React.FC<SpacerProps> = ({space, direction}) => {
+const Spacer: React.FC<SpacerProps> = ({ space, direction }) => {
   return (
     <View
       style={{
