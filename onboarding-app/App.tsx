@@ -19,12 +19,17 @@ import Animated, {
 import data from './src/data/data';
 import Pagination from './src/components/pagination';
 import CustomButton from './src/components/CustomButton';
+import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {
   const {width: SCREEN_WIDTH} = useWindowDimensions();
   const x = useSharedValue(0);
   const flatListRef = useAnimatedRef(null);
   const flatListIndex = useSharedValue(0);
+  const onViewableItemChanged = ({viewableItems}: any) => {
+    (flatListIndex.value = viewableItems[0].index),
+      console.log(viewableItems[0].index);
+  };
 
   const onScroll = useAnimatedScrollHandler({
     onScroll: event => {
@@ -100,6 +105,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Animated.FlatList
+        ref={flatListRef}
         onScroll={onScroll}
         data={data}
         renderItem={({item, index}) => {
@@ -111,15 +117,18 @@ const App = () => {
         bounces={false}
         pagingEnabled={false}
         showsHorizontalScrollIndicator={false}
+        onViewableItemsChanged={onViewableItemChanged}
       />
-      <View style={styles.bottomContainer}>
-        <Pagination data={data} x={x} screenWidth={SCREEN_WIDTH} />
-        <CustomButton
-          flatListRef={flatListRef}
-          flatListIndex={flatListIndex}
-          dataLength={data.length}
-        />
-      </View>
+      <NavigationContainer>
+        <View style={styles.bottomContainer}>
+          <Pagination data={data} x={x} screenWidth={SCREEN_WIDTH} />
+          <CustomButton
+            flatListRef={flatListRef}
+            flatListIndex={flatListIndex}
+            dataLength={data.length}
+          />
+        </View>
+      </NavigationContainer>
     </SafeAreaView>
   );
 };
