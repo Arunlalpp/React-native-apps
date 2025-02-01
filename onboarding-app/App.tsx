@@ -1,5 +1,4 @@
 import {
-  Image,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -24,7 +23,7 @@ import {NavigationContainer} from '@react-navigation/native';
 const App = () => {
   const {width: SCREEN_WIDTH} = useWindowDimensions();
   const x = useSharedValue(0);
-  const flatListRef = useAnimatedRef(null);
+  const flatListRef = useAnimatedRef<any>(null);
   const flatListIndex = useSharedValue(0);
   const onViewableItemChanged = ({viewableItems}: any) => {
     (flatListIndex.value = viewableItems[0].index),
